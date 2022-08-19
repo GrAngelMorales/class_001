@@ -8,16 +8,19 @@ use Illuminate\Support\Facades\Http;
 
 class ConsultaApi extends Controller
 {
-    
-    public function apiConsult (){
 
-        $response=HTTP::get('https://pokeapi.co/api/v2/pokemon/');
-        $respuesta=$response['results'][5];
+    public function apiConsult() {
 
-        $respuesta=json_encode($respuesta);
+        $url = "https://pokeapi.co/api/v2/pokemon/";
+        $contentFromApi = \file_get_contents($url) ?: '';
+        $testForecast = \GuzzleHttp\json_decode($contentFromApi, true);
+        $respuesta = $testForecast['results'];
 
-        return gettype($respuesta);
-        return view('auth.poquedex',compact('respuesta'));
+        return view('auth.poquedex', compact('respuesta'));
+    }
+
+    public function getDetalles(Request $request){
+        
     }
 
 }

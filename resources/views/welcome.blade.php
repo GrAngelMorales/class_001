@@ -15,12 +15,16 @@
 
 <body>
 
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col-8">
-                <div class="card p-5 shadow">
-                    <h1 class="mt-5 mb-5">POKÉAPI</h1>
-                    <a href="{{ url('poquedex') }}" class="btn btn-danger mt-5 mb-5">Ver Pokedex</a>
+    <div class="container p-5 mt-5 mb-5 h-100 w-100">
+        <div class="row p-5 mt-5 d-flex justify-content-center">
+            <div class="col-10 p-5 mt-5">
+                <div class="card p-5 shadow text-center">
+                    <h1 class="mt-5 mb-5" id="poke-h1">POKÉAPI</h1>
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-4">
+                            <a href="{{ url('poquedex') }}" class="btn btn-outline-danger mt-5 mb-5 w-100">Ver Pokedex</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
