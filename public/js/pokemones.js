@@ -12,16 +12,13 @@ function detallePokemon(id) {
             let altura = data['height'];
             let typo = data['types'];
 
-            console.log(habi);
-            console.log(altura);
-            console.log(typo);
-
             let tr = document.getElementById("hab");
             let tr1 = "";
             let tr3 = "";
 
             habi.forEach(function(habil){
-                tr1 += "<tr>"+habil+"</tr>";
+                tr1 += "<tr>"+"<td>"+habil.name+"</td>"+"<td>"+habil.url+"</td>"+"</tr>";
+                console.log(habi);
             })
 
             tr.innerHTML = tr1;
