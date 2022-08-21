@@ -20,14 +20,26 @@ $i = 1;
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header text-bg-danger">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="row p-5">
                         <div class="col-4">
-                            <img src="" alt="Imagen del pokemon seleccionado.">
+                            <div class="row">
+                                <div class="col-12 mt-4" id="im_pok">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 mt-3">
+                                    <h4 class="poke-h4">ALTURA: <span id="alt"></span> m</h4>
+                                </div>
+                                <div class="col-12">
+                                    <h4 class="poke-h4">PESO: <span id="pes"></span> kg</h4>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-8">
                             <div class="row">
@@ -41,14 +53,9 @@ $i = 1;
                                             </tr>
                                         </thead>
                                         <tbody id="hab">
-                                            
+
                                         </tbody>
                                     </table>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <h4 class="poke-h4">ALTURA <p> </p></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -61,7 +68,7 @@ $i = 1;
                                                 <th scope="col">INFO</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="tip">
 
                                         </tbody>
                                     </table>
